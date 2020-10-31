@@ -32,7 +32,7 @@ TODAY = dt.date.today()
 # Training function for tickers
 
 
-def train(ticker):
+def train(ticker="MSFT"):
 
     # Need conditional try/except here for impossible ticker????
     # Also look at dynamic date range up to a few yrs?? Need to time runs with large datasets
@@ -60,7 +60,7 @@ def train(ticker):
 
 # Prediction function
 
-def predict(ticker, days = 7):
+def predict(ticker = "MSFT", days = 7):
     
     ticker_file = Path(DIR).joinpath(f'{ticker}.joblib')
     
