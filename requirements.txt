@@ -8,3 +8,4 @@ joblib
 pandas
 plotly
 yfinance
+gunicorn
