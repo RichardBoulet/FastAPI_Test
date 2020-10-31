@@ -36,14 +36,3 @@ def get_prediction(payload: StockIn):
     return response_object
 
 
-
-@app.get('/results')
-async def prediction_results():
-    
-    ticker = 'MSFT'
-    
-    prediction_list = predict(ticker)
-    
-    response_object = {"ticker": ticker, "forecast": convert(prediction_list)}
-    
-    return response_object
