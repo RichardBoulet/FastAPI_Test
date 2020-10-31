@@ -1,0 +1,10 @@
+# imports needed for fastapi
+
+fastapi
+uvicorn
+
+fbprophet
+joblib
+pandas
+plotly
+yfinance
