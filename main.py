@@ -7,10 +7,9 @@ app = FastAPI()
         
 # Routes
 
-@app.get('/ping')
+@app.get("/")
 def pong():
-    
-    return{'ping':'pong!'}
+    return {"ping":"pong!"}
 
 
 
