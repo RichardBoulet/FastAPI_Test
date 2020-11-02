@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 #from pydantic import BaseModel
-#from api_model import convert, predict
+from model import predict, convert
 
 app = FastAPI()
 
@@ -26,5 +26,11 @@ def pong():
 #    response_object = {"ticker": ticker,"forecast": convert(prediction_list)}
     
 #    return response_object
+
+
+	
+@app.get("predict/{ticker}")
+def get_prediction():
+	return ticker
 	
 	
