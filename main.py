@@ -20,6 +20,6 @@ def get_prediction():
 	
 	prediction_convert = convert(prediction_list)
 	
-	return {'forecast': prediction_convert}
+	return 'test'
 	
 	
