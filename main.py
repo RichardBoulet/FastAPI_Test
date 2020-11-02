@@ -8,6 +8,7 @@ app = FastAPI()
 
 class StockIn(BaseModel):
     ticker: str
+    
         
 class StockOut(StockIn):
     forecast: dict
@@ -36,3 +37,16 @@ def get_prediction(payload: StockIn):
     return response_object
 
 
+
+@app.get('/results', response_model = StockOut)
+def results(payload: StockIn):
+
+	ticker = payload.ticker
+	
+	prediction_list = predict(ticker)
+	
+	response = {"ticker": ticker, "forecast": convert(prediction_list)}
+	
+	return response
+	
+	
