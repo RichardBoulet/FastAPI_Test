@@ -5,13 +5,6 @@ from api_model import convert, predict
 
 app = FastAPI()
 
-
-class StockIn(BaseModel):
-    ticker: str
-    
-        
-class StockOut(StockIn):
-    forecast: dict
         
 # Routes
 
@@ -22,31 +15,18 @@ async def pong():
 
 
 
-@app.post('/predict', response_model = StockOut, status_code = 200)
-def get_prediction(payload: StockIn):
+#@app.post('/predict', response_model = StockOut, status_code = 200)
+#def get_prediction(payload: StockIn):
     
-    ticker = payload.ticker
+#    ticker = payload.ticker
     
-    prediction_list = predict(ticker)
+#    prediction_list = predict(ticker)
     
-    if not prediction_list:
-        raise HTTPException(status_code = 400, detail = "Model Not Found")
+#    if not prediction_list:
+#        raise HTTPException(status_code = 400, detail = "Model Not Found")
         
-    response_object = {"ticker": ticker,"forecast": convert(prediction_list)}
+#    response_object = {"ticker": ticker,"forecast": convert(prediction_list)}
     
-    return response_object
-
-
-
-@app.get('/results', response_model = StockOut)
-def results(payload: StockIn):
-
-	ticker = payload.ticker
-	
-	prediction_list = predict(ticker)
-	
-	response = {"ticker": ticker, "forecast": convert(prediction_list)}
-	
-	return response
+#    return response_object
 	
 	
