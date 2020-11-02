@@ -32,8 +32,8 @@ def pong():
 @app.get('/predict/{ticker}')
 def get_prediction():
 	if ticker == 'MSFT':
-		return 'Microsoft'
+		return {'ticker':'Microsoft'}
 		
 	if ticker == 'TSLA':
-		return 'TESLA'
+		return {'ticker':'TESLA'}
 	
