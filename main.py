@@ -13,13 +13,13 @@ def pong():
 
 
 	
-@app.get('/predict/{ticker}')
-def get_prediction(ticker):
+@app.get('/predict')
+def get_prediction():
 	
-	prediction_list = predict(ticker)
+	prediction_list = predict()
 	
 	prediction_convert = convert(prediction_list)
 	
-	return {'ticker': ticker, 'forecast': prediction_convert}
+	return {'forecast': prediction_convert}
 	
 	
