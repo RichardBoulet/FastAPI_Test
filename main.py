@@ -8,7 +8,7 @@ app = FastAPI()
 # Routes
 
 @app.get('/ping')
-async def pong():
+def pong():
     
     return{'ping':'pong!'}
 
