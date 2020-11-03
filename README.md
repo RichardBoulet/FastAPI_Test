@@ -1,12 +1,6 @@
 FastAPI_Test
 
-Repo for testing deployment of ML model for ticker price prediction. Examples of code used from Michael Herman: blog post on fastapi/heroku, source: 'https://testdriven.io/blog/fastapi-machine-learning/'
-
-and from MAndy Gu -
-
-https://towardsdatascience.com/deploying-iris-classifications-with-fastapi-and-docker-7c9b83fdec3a
-
-
+Repo for testing deployment of ML model to use with fastapi. Looking at various methods to deploy via heroku and AWS. 
 
 Additional plans/adjustments:
 1- Check use of process with Streamlit 
