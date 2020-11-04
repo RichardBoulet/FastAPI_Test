@@ -1,3 +1,4 @@
+
 from iris import Iris
 from fastapi import FastAPI, Query
 from typing import List
@@ -16,7 +17,7 @@ def proper_root():
 	return {'ERROR': 'Use GET /predict instead of root route!'}
 
 
-@app.post('/predict/')
+@app.get('/predict/')
 def predict(features = Query(None)):
 	
 	features = json.loads(features)
